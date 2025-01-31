@@ -20,6 +20,10 @@
 .menu-icon {
   display: none; /* Default behavior: hide on large screens */
 }
+.title a.logo.active {
+  color: #fff;
+  text-decoration: none;
+}
 
 /* Spacer for alignment */
 span.spacer {
@@ -75,6 +79,9 @@ span.spacer {
   span.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
     color: #fff !important;
 }
+.mat-mdc-nav-list.mat-mdc-list-base.mdc-list .mdc-list-item__primary-text {
+  color: #ffff!important;
+}
 }
 
 @media (max-width: 768px) {
@@ -95,4 +102,7 @@ span.spacer {
   .mdc-list-item:hover .mdc-list-item__primary-text {
     color: #cc2143;
   }
+  .mat-mdc-nav-list.mat-mdc-list-base.mdc-list .mdc-list-item__primary-text {
+    color: #ffff!important;
+}
 }

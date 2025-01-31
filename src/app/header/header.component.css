@@ -93,9 +93,9 @@ span.spacer {
     width: 80%; /* Adjust width for mobile screens */
   }
 
-  .mat-sidenav-container {
-    height: 100vh; /* Ensure the container takes full height */
-  }
+  /*.mat-sidenav-container {
+    height: 100vh;  Ensure the container takes full height 
+  }*/
   span.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
     color: #fff!important;
   }

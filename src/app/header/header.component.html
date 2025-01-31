@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- Hamburger menu icon -->
+    <button mat-icon-button class="menu-icon" (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Title -->
+    <span class="title">My Portfolio</span>
+    <span class="spacer"></span>
+
+    <!-- Navigation links -->
+    <div class="nav-links">
+      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
+      <!--<button mat-button (click)="scrollToAbout()">About</button>
+      <button mat-button (click)="scrollToWork()">Projects</button>-->
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" [opened]="false">
+    <mat-nav-list>
+      <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+      <a mat-button routerLink="/projects" routerLinkActive="active">Projects</a>
+
+      <!--<a mat-list-item (click)="sidenav.close()">About</a>
+      <a mat-list-item (click)="sidenav.close()">Projects</a>-->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Main Content Placeholder -->
+    <div class="main-content">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

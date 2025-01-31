@@ -1,0 +1,98 @@
+/* General Toolbar Styling */
+.mat-toolbar {
+  position: fixed; /* Ensure it stays at the top of the screen */
+  top: 0;
+  z-index: 1000; /* Keeps toolbar on top of other content */
+  width: 100%; /* Full-width toolbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+  color: #fff;
+  background-color: #142344;
+}
+.mdc-list-item__primary-text{
+  color: #fff!important;
+}
+.mat-toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: none; /* Default behavior: hide on large screens */
+}
+
+/* Spacer for alignment */
+span.spacer {
+  flex: 1 1 auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Sidenav and Container Adjustments */
+.mat-sidenav-container {
+  margin-top: 54px; /* Prevent toolbar overlap with content */
+}
+
+.mat-sidenav {
+  width: 250px;
+  background-color: #142344;
+  color: #fff;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.mat-nav-list a.mat-list-item {
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.mat-nav-list a.mat-list-item:hover {
+  background-color: #0d1a33;
+}
+
+.mat-mdc-button:not(:disabled) {
+  color: #fff;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: inline-flex; /* Show menu icon on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links */
+  }
+
+  .mat-sidenav {
+    width: 200px;
+  }
+  span.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+    color: #fff !important;
+}
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .mat-sidenav {
+    width: 80%; /* Adjust width for mobile screens */
+  }
+
+  .mat-sidenav-container {
+    height: 100vh; /* Ensure the container takes full height */
+  }
+  span.mat-mdc-list-item-unscoped-content.mdc-list-item__primary-text {
+    color: #fff!important;
+  }
+  .mdc-list-item:hover .mdc-list-item__primary-text {
+    color: #cc2143;
+  }
+}

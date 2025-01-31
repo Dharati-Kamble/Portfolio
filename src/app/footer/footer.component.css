@@ -1,0 +1,32 @@
+/* Footer styling */
+.footer {
+    /*position: fixed;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .mat-toolbar{
+    background-color: #142344;
+  }
+  /* Spacer between text and social links */
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Links style */
+  .footer a,
+  .footer .rights {
+    font-size: 14px;
+    color: white;
+  }
+
+ 
+  /* Optional: Add hover effects */
+  .footer a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+  }
+  

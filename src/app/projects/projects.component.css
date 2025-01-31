@@ -1,0 +1,127 @@
+div#project-page {
+    margin: 40px 0px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /*display: flex;
+    flex-wrap: nowrap; 
+    justify-content: flex-start;
+    gap: 20px; 
+    overflow-x: auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc transparent; */
+  }
+  
+  .card-container::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar for horizontal scrolling */
+  }
+  
+  .card-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+  }
+  
+  .card-container::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track background */
+  }
+  
+  .animated-card {
+    flex: 0 0 auto; 
+    width: 370px; 
+    transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                box-shadow 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #fff;
+    border-radius: 8px; 
+    overflow: hidden; 
+  }
+  
+  .animated-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+  }
+   
+
+  /*.animated-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  } */
+  .technologies {
+    margin-top: 1rem;
+  }
+  
+  .technologies h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .technologies ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .technologies li {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-title {
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #142344;
+    margin-bottom: 35px;
+    font-size: 2.5em; 
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: repeating-radial-gradient(circle at 100% 100%, rgba(255, 190, 11, 0.5) 4%, rgba(255, 190, 11, 0.5) 8%, rgba(251, 86, 7, 0.5) 8%, rgba(251, 86, 7, 0.5) 12%, rgba(255, 0, 110, 0.5) 12%, rgba(255, 0, 110, 0.5) 16%, rgba(131, 56, 236, 0.5) 16%, rgba(131, 56, 236, 0.8) 20%, rgba(58, 134, 255, 0.5) 20%, rgba(58, 134, 255, 0.5) 24%), repeating-radial-gradient(circle at 0% 100%, rgba(255, 190, 11, 0.7) 4%, rgba(255, 190, 11, 0.9) 8%, rgba(251, 86, 7, 0.7) 8%, rgba(251, 86, 7, 0.9) 12%, rgba(255, 0, 110, 0.7) 12%, rgba(255, 0, 110, 0.9) 16%, rgba(131, 56, 236, 0.8) 16%, rgba(131, 56, 236, 0.8) 20%, rgba(58, 134, 255, 0.8) 20%, rgba(58, 134, 255, 0.8) 24%);
+    background-size: 250px 250px;
+    background-position: 0 0;
+    -webkit-animation: stripes 3s linear infinite;
+            animation: stripes 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Underline effect */
+  .project-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust underline distance from the text */
+    left: 50%;
+    transform: translateX(-50%) scaleX(0); /* Start with no underline */
+    width: 60%; /* Width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #1976d2; /* Color of the underline */
+    transition: transform 0.3s ease-in-out; /* Animation effect */
+  }
+  
+  /* Hover effect */
+  .project-title:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Expand the underline */
+  }
+  .mat-mdc-card-content p {
+    line-height: 1.5;
+}

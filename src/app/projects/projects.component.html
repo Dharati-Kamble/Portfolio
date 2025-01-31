@@ -1,0 +1,39 @@
+<div id="project-page" class="project-section">
+    <h2 class="project-title">Projects</h2>
+    <div class="card-container">
+        <mat-card
+          class="animated-card"
+          *ngFor="let card of cards"
+          [@hoverEffect]="hoverState"
+          (mouseover)="hoverState = 'hovered'"
+          (mouseleave)="hoverState = 'normal'">
+          
+          <!-- Card Header with Title and Image -->
+          <mat-card-header>
+            <img mat-card-avatar [src]="card.image" alt="{{ card.title }}" class="card-image" />
+            
+            <mat-card-title>{{ card.title }}</mat-card-title>
+          </mat-card-header>
+          
+          <!-- Card Content -->
+          <mat-card-content>
+            <mat-card-subtitle>Description : </mat-card-subtitle>
+            <p>{{ card.content }}</p>
+            <!-- Technologies List
+            <div class="technologies">
+              <h4>Technologies:</h4>
+              <ul>
+                <li *ngFor="let tech of card.technology">{{ tech }}</li>
+              </ul>
+            </div> -->
+          </mat-card-content>
+          
+          <!-- Card Actions -->
+          <!-- <mat-card-actions>
+            <button mat-button>Learn More</button>
+          </mat-card-actions> -->
+        </mat-card>
+      </div>
+</div>
+
+  

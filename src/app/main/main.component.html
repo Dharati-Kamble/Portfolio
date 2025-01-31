@@ -1,0 +1,102 @@
+<!-- Portfolio Card -->
+<mat-card class="portfolio-container" *ngIf="isLoaded">
+    <div class="intro-content" @fadeIn>
+      <mat-card-header>
+        <mat-card-title class="intro">Hello, I am Dharati</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="description">
+          I am a Software Engineer with a passion for learning and tackling new challenges. I have strong analytical and problem-solving skills, a positive attitude, and a commitment to delivering high-quality results. I’m eager to make meaningful contributions and achieve great outcomes. My experience includes working on both design and development projects.
+        </p>
+      </mat-card-content>
+      <button mat-flat-button color="accent" class="scroll-btn" (click)="scrollToWork()">Scroll down to see my projects!</button>
+    </div>
+  </mat-card>
+  
+   <!--<p class="problem-solving">
+          My positive approach to problem-solving involves finding multiple ways to resolve an issue. If I can't find an immediate solution, I look for alternative methods until I find the best resolution.
+          I am a Software Engineer with over 6 years of experience in the IT sector. As a full-stack developer, I enjoy working in team-oriented environments.
+        </p>-->
+         <!--<mat-card-actions>
+        <button mat-raised-button color="primary">Contact Me</button>
+      </mat-card-actions>-->
+      <!-- Scroll Button -->
+  
+  <!-- Work Section -->
+  <div id="work-section" class="project-covers">
+    <h2 class="work-title">My Projects</h2>
+    <div class="card-container">
+      <!-- Dynamically Rendered Cards -->
+      <a 
+        class="card-link" 
+        *ngFor="let project of projects" 
+        [href]="project.link" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <div class="card">
+          <img [src]="project.image" class="card-img-top" [alt]="project.title" />
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <!--<p class="card-text">{{ project.description }}</p> -->
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Work Section -->
+  <div id="aboutus" class="aboutus-section">
+    <h2 class="about-title">About Us</h2>
+    <mat-card-content>
+      <p class="about-description">
+        I'm a Full-Stack Developer with a strong background in web development. I enjoy building interactive, user-friendly applications that blend great design with functionality. I work with technologies like HTML5, CSS3, JavaScript, TypeScript, and Bootstrap for front-end development, and PHP, Node.js, Express.js, and MongoDB for back-end solutions. Currently, I’m learning advanced frameworks like Angular and continuously improving my skills. Outside of coding, I enjoy solving real-world problems with creative ideas.
+      </p>
+      <br/>
+      <p class="about-description">
+        I have a positive approach to problem-solving, always seeking multiple ways to tackle an issue. If a direct solution isn’t apparent, I persistently explore alternative methods until I identify the best resolution. Learning and growing through challenges is what motivates me.
+      </p>
+      <!-- Download Resume Button -->
+      <div class="resume-download">
+        <button mat-raised-button color="primary" (click)="downloadResume()">
+          <mat-icon>download</mat-icon> Download Resume
+        </button>
+      </div>
+    </mat-card-content>
+  </div>
+  
+  <!-- About Us Section -->
+  <!--<section id="aboutus" class="aboutus-section">
+    <mat-card class="about-card">
+      <mat-card-header>
+        <mat-card-title class="about-title">About Us</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="about-description">
+          We are a passionate team of developers focused on delivering high-quality web applications. Our journey in the tech world began years ago, and we’ve evolved into skilled professionals in web development. 
+          Our aim is to solve problems with technology and create meaningful digital experiences.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onContactUsClick()">Contact Us</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>-->
+  
+  
+  <!-- Contact Section 
+  <div id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>-->
+  
+  
+  
+  
+  
+  
